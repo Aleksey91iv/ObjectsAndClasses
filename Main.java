@@ -2,7 +2,7 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Объекты и классы.\n");
+        System.out.println("Объекты, классы и методы\n");
 
         try {
             Librarian librarian = new Librarian();
@@ -10,6 +10,5 @@ public class Main {
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
-
     }
 }
