@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 class Book {
 
     private String title;
@@ -37,7 +39,7 @@ class Book {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj != null && obj instanceof Book book) {
+        if (obj instanceof Book book) {
             return title.equals(book.title) && publicationYear == book.publicationYear && author.equals(book.author);
         }
         else {
@@ -47,6 +49,6 @@ class Book {
 
     @Override
     public int hashCode() {
-        return (title + publicationYear + author.getFirstName() + author.getLastName()).hashCode();
+        return Objects.hash(title, publicationYear, author);
     }
 }
